@@ -1,5 +1,5 @@
 """
-资产处理工具集
+Asset handling utilities
 """
 import unreal
 
@@ -8,22 +8,22 @@ def spawn_static_mesh_actor(asset_path, location=unreal.Vector(0, 0, 0),
                             scale=unreal.Vector(1.0, 1.0, 1.0), 
                             actor_label="MySpawnedActor"):
     """
-    在场景中生成一个静态网格体Actor。
+    Spawn a static mesh actor in the scene.
 
-    :param asset_path: 静态网格体资产的完整路径 (例如, /Game/StarterContent/Shapes/Shape_Cube.Shape_Cube)
-    :param location: 生成位置 (unreal.Vector)
-    :param rotation: 生成旋转 (unreal.Rotator)
-    :param scale: 生成缩放 (unreal.Vector)
-    :param actor_label: 在编辑器中为Actor设置的标签名
-    :return: 成功则返回生成的Actor对象，失败则返回None
+    :param asset_path: Full path to the static mesh asset (e.g., /Game/StarterContent/Shapes/Shape_Cube.Shape_Cube)
+    :param location: Spawn location (unreal.Vector)
+    :param rotation: Spawn rotation (unreal.Rotator)
+    :param scale: Spawn scale (unreal.Vector)
+    :param actor_label: Label name for the actor in the editor
+    :return: Returns the spawned Actor object on success, None on failure
     """
-    # 1. 加载资产
+    # 1. Load the asset
     static_mesh_asset = unreal.load_asset(asset_path)
     if not static_mesh_asset:
-        unreal.log_error(f"无法加载资产,请检查路径: {asset_path}")
+        unreal.log_error(f"Failed to load asset, please check the path: {asset_path}")
         return None
 
-    # 2. 生成一个空的 StaticMeshActor
+    # 2. Spawn an empty StaticMeshActor
     editor_level_lib = unreal.EditorLevelLibrary()
     new_actor = editor_level_lib.spawn_actor_from_class(
         unreal.StaticMeshActor.static_class(),
@@ -31,18 +31,18 @@ def spawn_static_mesh_actor(asset_path, location=unreal.Vector(0, 0, 0),
         rotation
     )
     if not new_actor:
-        unreal.log_error("生成Actor失败!")
+        unreal.log_error("Failed to spawn Actor!")
         return None
 
-    # 3. 将模型赋给Actor
+    # 3. Assign the mesh to the actor
     static_mesh_component = new_actor.static_mesh_component
     static_mesh_component.set_static_mesh(static_mesh_asset)
 
-    # 4. 设置其他属性
+    # 4. Set other properties
     new_actor.set_actor_scale3d(scale)
     new_actor.set_actor_label(actor_label)
     
-    unreal.log(f"成功生成Actor '{actor_label}' 并设置模型。")
+    unreal.log(f"Successfully spawned Actor '{actor_label}' and set the mesh.")
     return new_actor
 
 
@@ -51,27 +51,27 @@ def spawn_skeletal_mesh_actor(asset_path, location=unreal.Vector(0, 0, 0),
                               scale=unreal.Vector(1.0, 1.0, 1.0), 
                               actor_label="MySkeletalActor"):
     """
-    在场景中生成一个骨骼网格体Actor。
+    Spawn a skeletal mesh actor in the scene.
 
-    :param asset_path: 骨骼网格体资产的完整路径 (例如, /Game/ForestAnimalsPack/Bear/Meshes/SK_Bear.SK_Bear)
-    :param location: 生成位置 (unreal.Vector)
-    :param rotation: 生成旋转 (unreal.Rotator)
-    :param scale: 生成缩放 (unreal.Vector)
-    :param actor_label: 在编辑器中为Actor设置的标签名
-    :return: 成功则返回生成的Actor对象,失败则返回None
+    :param asset_path: Full path to the skeletal mesh asset (e.g., /Game/ForestAnimalsPack/Bear/Meshes/SK_Bear.SK_Bear)
+    :param location: Spawn location (unreal.Vector)
+    :param rotation: Spawn rotation (unreal.Rotator)
+    :param scale: Spawn scale (unreal.Vector)
+    :param actor_label: Label name for the actor in the editor
+    :return: Returns the spawned Actor object on success, None on failure
     """
-    # 1. 加载骨骼网格体资产
+    # 1. Load the skeletal mesh asset
     skeletal_mesh_asset = unreal.load_asset(asset_path)
     if not skeletal_mesh_asset:
-        unreal.log_error(f"无法加载骨骼网格体资产,请检查路径: {asset_path}")
+        unreal.log_error(f"Failed to load skeletal mesh asset, please check the path: {asset_path}")
         return None
     
-    # 验证资产类型
+    # Validate asset type
     if not isinstance(skeletal_mesh_asset, unreal.SkeletalMesh):
-        unreal.log_error(f"资产不是骨骼网格体类型: {asset_path}")
+        unreal.log_error(f"Asset is not a skeletal mesh type: {asset_path}")
         return None
 
-    # 2. 生成一个空的 SkeletalMeshActor
+    # 2. Spawn an empty SkeletalMeshActor
     editor_level_lib = unreal.EditorLevelLibrary()
     new_actor = editor_level_lib.spawn_actor_from_class(
         unreal.SkeletalMeshActor.static_class(),
@@ -79,23 +79,23 @@ def spawn_skeletal_mesh_actor(asset_path, location=unreal.Vector(0, 0, 0),
         rotation
     )
     if not new_actor:
-        unreal.log_error("生成SkeletalMeshActor失败!")
+        unreal.log_error("Failed to spawn SkeletalMeshActor!")
         return None
 
-    # 3. 获取SkeletalMeshComponent并设置骨骼网格体
+    # 3. Get SkeletalMeshComponent and set the skeletal mesh
     skeletal_mesh_component = new_actor.skeletal_mesh_component
     if skeletal_mesh_component:
         skeletal_mesh_component.set_skeletal_mesh(skeletal_mesh_asset)
     else:
-        unreal.log_error("无法获取SkeletalMeshComponent!")
+        unreal.log_error("Failed to get SkeletalMeshComponent!")
         editor_level_lib.destroy_actor(new_actor)
         return None
 
-    # 4. 设置其他属性
+    # 4. Set other properties
     new_actor.set_actor_scale3d(scale)
     new_actor.set_actor_label(actor_label)
     
-    unreal.log(f"成功生成骨骼网格体Actor '{actor_label}'。")
+    unreal.log(f"Successfully spawned skeletal mesh Actor '{actor_label}'.")
     return new_actor
 
 
@@ -104,28 +104,28 @@ def spawn_mesh_actor(asset_path, location=unreal.Vector(0, 0, 0),
                     scale=unreal.Vector(1.0, 1.0, 1.0), 
                     actor_label="MyActor"):
     """
-    智能生成网格体Actor,自动检测是静态网格体还是骨骼网格体。
+    Intelligently spawn a mesh actor, automatically detecting whether it's a static mesh or skeletal mesh.
 
-    :param asset_path: 网格体资产的完整路径
-    :param location: 生成位置 (unreal.Vector)
-    :param rotation: 生成旋转 (unreal.Rotator)
-    :param scale: 生成缩放 (unreal.Vector)
-    :param actor_label: 在编辑器中为Actor设置的标签名
-    :return: 成功则返回生成的Actor对象,失败则返回None
+    :param asset_path: Full path to the mesh asset
+    :param location: Spawn location (unreal.Vector)
+    :param rotation: Spawn rotation (unreal.Rotator)
+    :param scale: Spawn scale (unreal.Vector)
+    :param actor_label: Label name for the actor in the editor
+    :return: Returns the spawned Actor object on success, None on failure
     """
-    # 加载资产
+    # Load the asset
     mesh_asset = unreal.load_asset(asset_path)
     if not mesh_asset:
-        unreal.log_error(f"无法加载资产: {asset_path}")
+        unreal.log_error(f"Failed to load asset: {asset_path}")
         return None
     
-    # 根据资产类型调用相应的函数
+    # Call the appropriate function based on asset type
     if isinstance(mesh_asset, unreal.SkeletalMesh):
-        unreal.log(f"检测到骨骼网格体,使用SkeletalMeshActor: {asset_path}")
+        unreal.log(f"Detected skeletal mesh, using SkeletalMeshActor: {asset_path}")
         return spawn_skeletal_mesh_actor(asset_path, location, rotation, scale, actor_label)
     elif isinstance(mesh_asset, unreal.StaticMesh):
-        unreal.log(f"检测到静态网格体,使用StaticMeshActor: {asset_path}")
+        unreal.log(f"Detected static mesh, using StaticMeshActor: {asset_path}")
         return spawn_static_mesh_actor(asset_path, location, rotation, scale, actor_label)
     else:
-        unreal.log_error(f"不支持的网格体类型: {type(mesh_asset).__name__}")
+        unreal.log_error(f"Unsupported mesh type: {type(mesh_asset).__name__}")
         return None
