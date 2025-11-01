@@ -1,0 +1,277 @@
+{
+  "output_directory": "D:/ue5/projects/first/Saved/Screenshots",
+  "available_motions": [
+    "sine_wave",
+    "z_shape",
+    "circle",
+    "spiral",
+    "square_wave",
+    "zigzag",
+    "triangle_wave",
+    "ellipse",
+    "figure8",
+    "arc",
+    "bounce",
+    "sawtooth",
+    "serpentine",
+    "lissajous",
+    "pendulum",
+    "expand_circle",
+    "rectangle_loop",
+    "diamond",
+    "infinity_horizontal",
+    "random_walk",
+    "static_rotation"
+  ],
+  "hdri_scenes": [
+    {
+      "name": "Courtyard_Scene",
+      "map_path": "/Game/StarterContent/Maps/first.first",
+      "hdri_path": "/Game/StarterContent/HDRI/german_town_street_4k.german_town_street_4k",
+      "hdri_transform": {
+        "location": {"x": -666, "y": 2000, "z": 1800},
+        "rotation": {"pitch": 0.0, "yaw": 0, "roll": 0},
+        "scale": {"x": 1.0, "y": 1.0, "z": 1.0}
+      },
+      "camera_config": {
+        "location": {"x": -1090, "y": 2231, "z": 2176},
+        "rotation": {"pitch": -9, "yaw": 120, "roll": 0.0}
+      },
+      "motion_config": {
+        "initial_location": {"x": -2500, "y": 3200, "z": 1800},
+        "initial_rotation": {"pitch": 0, "yaw": 45, "roll": 0},
+        "num_frames": 21,
+        "total_distance": 1500,
+        "total_rotation": 720,
+        "y_amplitude": 350,
+        "y_frequency": 2.5
+      },
+      "assets": [
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Toy_Horse/Mid/Meshes/Wooden_Toy_Horse_uhcjdhpva_Mid.Wooden_Toy_Horse_uhcjdhpva_Mid",
+          "label": "Wooden_Toy_Horse",
+          "initial_scale": {"x": 20, "y": 20, "z": 20},
+          "motions": ["sine_wave"]
+        }
+      ],
+      "assets_disabled": [
+        {
+          "path": "/Game/Fab/Megascans/Metal_Pot/Mid/Meshes/Metal_Pot_vfyqcj2ga_Mid_vfyqcj2ga_LOD0_TIER2_000.Metal_Pot_vfyqcj2ga_Mid_vfyqcj2ga_LOD0_TIER2_000",
+          "label": "Metal_Pot",
+          "initial_scale": {"x": 7, "y": 7, "z": 7},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Chest/Mid/Meshes/Wooden_Chest_ulejaaxga_Mid.Wooden_Chest_ulejaaxga_Mid",
+          "label": "Wooden_Chest",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Ancient_Temple_Stones/Mid/Meshes/Ancient_Temple_Stones_tixjegefa_Mid.Ancient_Temple_Stones_tixjegefa_Mid",
+          "label": "Ancient_Temple_Stones",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Animal_Leg_Bone/Mid/Meshes/Animal_Leg_Bone_vebhfbraa_Mid.Animal_Leg_Bone_vebhfbraa_Mid",
+          "label": "Animal_Leg_Bone",
+          "initial_scale": {"x": 25, "y": 25, "z": 25},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Animal_Skull/Mid/Meshes/Animal_Skull_wk5idfu_Mid.Animal_Skull_wk5idfu_Mid",
+          "label": "Animal_Skull",
+          "initial_scale": {"x": 12, "y": 12, "z": 12},
+          "motions": ["static_rotation"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Banquet_Roasted_Quail/Mid/Meshes/Banquet_Roasted_Quail_wktnfbds_Mid.Banquet_Roasted_Quail_wktnfbds_Mid",
+          "label": "Banquet_Roasted_Quail",
+          "initial_scale": {"x": 20, "y": 20, "z": 20},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Barrel_On_Stand/Mid/Meshes/Barrel_On_Stand_udmmfbpqx_Mid.Barrel_On_Stand_udmmfbpqx_Mid",
+          "label": "Barrel_On_Stand",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Broken_Concrete_Barrier/Mid/Meshes/Broken_Concrete_Barrier_tlirchzfa_Mid.Broken_Concrete_Barrier_tlirchzfa_Mid",
+          "label": "Broken_Concrete_Barrier",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Broken_Wall/Mid/Meshes/Broken_Wall_slunl_Mid.Broken_Wall_slunl_Mid",
+          "label": "Broken_Wall",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Bulk_Bag/Mid/Meshes/Bulk_Bag_ukxkbesqa_Mid.Bulk_Bag_ukxkbesqa_Mid",
+          "label": "Bulk_Bag",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Cardboard_Box/Mid/Meshes/Cardboard_Box_vgyidauaw_Mid.Cardboard_Box_vgyidauaw_Mid",
+          "label": "Cardboard_Box",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["static_rotation"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Dirty_Styrofoam/Mid/Meshes/Dirty_Styrofoam_udjkfdfhw_Mid.Dirty_Styrofoam_udjkfdfhw_Mid",
+          "label": "Dirty_Styrofoam",
+          "initial_scale": {"x": 30, "y": 30, "z": 30},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Electrical_Cabinet/Mid/Meshes/Electrical_Cabinet_ujzfde2_Mid.Electrical_Cabinet_ujzfde2_Mid",
+          "label": "Electrical_Cabinet",
+          "initial_scale": {"x": 1, "y": 1, "z": 1},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Folding_Step_Ladder/Mid/Meshes/Folding_Step_Ladder_vh2jfjes_Mid.Folding_Step_Ladder_vh2jfjes_Mid",
+          "label": "Folding_Step_Ladder",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Industrial_Junkyard_Storage_Pallet_Wood_Tarp/Mid/Meshes/Industrial_Junkyard_Storage_Pallet_Wood_Tarp_xiwcfassc_Mid.Industrial_Junkyard_Storage_Pallet_Wood_Tarp_xiwcfassc_Mid",
+          "label": "Industrial_Junkyard_Storage_Pallet_Wood_Tarp",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Japanese_Komainu_Statue/Mid/Meshes/Japanese_Komainu_Statue_ubrpbjcfa_Mid.Japanese_Komainu_Statue_ubrpbjcfa_Mid",
+          "label": "Japanese_Komainu_Statue",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Leather_Luggage_Suitcase/Mid/Meshes/Leather_Luggage_Suitcase_wk2iafu_Mid.Leather_Luggage_Suitcase_wk2iafu_Mid",
+          "label": "Leather_Luggage_Suitcase",
+          "initial_scale": {"x": 10, "y": 10, "z": 10},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Metal_Pot/Mid/Meshes/Metal_Pot_vfyqcj2ga_Mid_vfyqcj2ga_LOD0_TIER2_001.Metal_Pot_vfyqcj2ga_Mid_vfyqcj2ga_LOD0_TIER2_001",
+          "label": "Metal_Pot",
+          "initial_scale": {"x": 8, "y": 8, "z": 8},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Mine_Cart/Mid/Meshes/Mine_Cart_ujzhahdfa_Mid.Mine_Cart_ujzhahdfa_Mid",
+          "label": "Mine_Cart",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Nordic_Beach_Rock_Formation/Mid/Meshes/Nordic_Beach_Rock_Formation_veflbabqx_Mid.Nordic_Beach_Rock_Formation_veflbabqx_Mid",
+          "label": "Nordic_Beach_Rock_Formation",
+          "initial_scale": {"x": 1, "y": 1, "z": 1},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Nordic_Beach_Rocks/Mid/Meshes/Nordic_Beach_Rocks_ulznddxva_Mid.Nordic_Beach_Rocks_ulznddxva_Mid",
+          "label": "Nordic_Beach_Rocks",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Oily_Paper_Roll/Mid/Meshes/Oily_Paper_Roll_vjxoffps_Mid.Oily_Paper_Roll_vjxoffps_Mid",
+          "label": "Oily_Paper_Roll",
+          "initial_scale": {"x": 20, "y": 20, "z": 20},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Old_Saddle/Mid/Meshes/Old_Saddle_ufzjadyga_Mid.Old_Saddle_ufzjadyga_Mid",
+          "label": "Old_Saddle",
+          "initial_scale": {"x": 8, "y": 8, "z": 8},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Old_Wooden_Crate/Mid/Meshes/Old_Wooden_Crate_ukqoeiwbw_Mid.Old_Wooden_Crate_ukqoeiwbw_Mid",
+          "label": "Old_Wooden_Crate",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Old_Wooden_Stool/Mid/Meshes/Old_Wooden_Stool_ukopadbaw_Mid.Old_Wooden_Stool_ukopadbaw_Mid",
+          "label": "Old_Wooden_Stool",
+          "initial_scale": {"x": 5, "y": 5, "z": 5},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Plastic_Container/Mid/Meshes/Plastic_Container_vh2mecws_Mid.Plastic_Container_vh2mecws_Mid",
+          "label": "Plastic_Container",
+          "initial_scale": {"x": 4, "y": 4, "z": 4},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Plastic_Crate/Mid/Meshes/Plastic_Crate_vifpcfpaw_Mid.Plastic_Crate_vifpcfpaw_Mid",
+          "label": "Plastic_Crate",
+          "initial_scale": {"x": 4, "y": 4, "z": 4},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Pork_Pie_Slice/Mid/Meshes/Pork_Pie_Slice_wfzobeds_Mid.Pork_Pie_Slice_wfzobeds_Mid",
+          "label": "Pork_Pie_Slice",
+          "initial_scale": {"x": 30, "y": 30, "z": 30},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Rusty_Metal_Barrel/Mid/Meshes/Rusty_Metal_Barrel_tewscfuda_Mid.Rusty_Metal_Barrel_tewscfuda_Mid",
+          "label": "Rusty_Metal_Barrel",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Sandbag_Pile/Mid/Meshes/Sandbag_Pile_udqjbg1qx_Mid.Sandbag_Pile_udqjbg1qx_Mid",
+          "label": "Sandbag_Pile",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Smoked_Meat/Mid/Meshes/Smoked_Meat_weukfcwaa_Mid.Smoked_Meat_weukfcwaa_Mid",
+          "label": "Smoked_Meat",
+          "initial_scale": {"x": 25, "y": 25, "z": 25},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Traffic_Signal_Control_Cabinet/Mid/Meshes/Traffic_Signal_Control_Cabinet_uh4ffdmga_Mid.Traffic_Signal_Control_Cabinet_uh4ffdmga_Mid",
+          "label": "Traffic_Signal_Control_Cabinet",
+          "initial_scale": {"x": 2, "y": 2, "z": 2},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Chest/Mid/Meshes/Wooden_Chest_ulejaaxga_Mid.Wooden_Chest_ulejaaxga_Mid",
+          "label": "Wooden_Chest",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Stool/Mid/Meshes/Wooden_Stool_ucspai0fa_Mid.Wooden_Stool_ucspai0fa_Mid",
+          "label": "Wooden_Stool",
+          "initial_scale": {"x": 4, "y": 4, "z": 4},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Table/Mid/Meshes/Wooden_Table_ulzrcgoaw_Mid.Wooden_Table_ulzrcgoaw_Mid",
+          "label": "Wooden_Table",
+          "initial_scale": {"x": 1, "y": 1, "z": 1},
+          "motions": ["sine_wave", "z_shape", "circle"]
+        },
+        {
+          "path": "/Game/Fab/Megascans/Wooden_Wheelbarrow/Mid/Meshes/Wooden_Wheelbarrow_tmruaaeda_Mid.Wooden_Wheelbarrow_tmruaaeda_Mid",
+          "label": "Wooden_Wheelbarrow",
+          "initial_scale": {"x": 3, "y": 3, "z": 3},
+          "motions": ["z_shape"]
+        }
+      ]
+    }
+  ]
+}
