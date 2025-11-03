@@ -1,6 +1,5 @@
 """
-Interactive Trajectory Drawing Tool - OOP Version
-Author: GitHub Copilot
+Interactive Trajectory Drawing Tool 
 Description: Draw parametric curves with mouse, like drawing in Word
 """
 
